@@ -1657,7 +1657,7 @@ function Base.summary(io::IO, mtrigs::MethodTriggers)
         ft = (Base.unwrap_unionall(MethodInstance(itrig.node).specTypes)::DataType).parameters[1]
         loc = loctrig.tag
         if loc.func == m.name
-            print(io, "Line ", loctrig.tag.line)
+            print(io, "  Line ", loctrig.tag.line)
         else
             print(io, "Inlined ", loc)
         end
